@@ -1,0 +1,39 @@
+#mainHeader {
+    list-style-type: none;
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    background-color: #1E0126;
+}
+
+#headerLink {
+    padding: 0.5rem;
+    border-radius: 5%;
+    color: #F2B705;
+    text-shadow: 1px 1px 4px #FF79CE;
+    font-weight: 10px;
+    text-decoration: none;
+    font-family: "schoolbell";
+}
+
+#logo {
+    flex: 1;
+    max-width: 200px;
+}
+
+#darkLight {
+    flex: 1;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+    background-color: #000000;
+}
+
+#darkLight:hover {
+  background-color: #ffe1fb5f;
+}
