@@ -1,5 +1,9 @@
 /* For all pages */
 
+h2{
+    color: #FFE1FB;
+}
+
 p {
     color: #FFE1FB;
 }
@@ -17,7 +21,12 @@ body {
 
 /* About me */
 
-
+#picOfMe {
+    width: 400px;
+    border-style: solid;
+    border-color: #FF79CE;
+    border-radius: 1000000000000000%;
+}
 
 /* My projects */
 
