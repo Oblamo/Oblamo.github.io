@@ -1,7 +1,9 @@
+/* Header */
+
 #mainHeader {
     list-style-type: none;
     display: flex;
-    gap: 7rem;
+    gap: 6rem;
     align-items: center;
     padding: 0.5rem 2rem;
     margin: 0;
@@ -10,10 +12,9 @@
 
 #headerLink {
     padding: 0.5rem;
-    border-radius: 5%;
     color: #F2B705;
     text-shadow: 1px 1px 4px #FF79CE;
-    font-weight: 10px;
+    font-size: 20px;
     text-decoration: none;
     font-family: "schoolbell";
 }
@@ -36,4 +37,21 @@
 
 #darkLight:hover {
   background-color: #ffe1fb5f;
+}
+
+/* Footer */
+
+#mainFooter{
+    display: flex;
+    justify-content: center;
+}
+
+#footerLink {
+
+    padding: 0.5rem;
+    color: #F2B705;
+    text-shadow: 1px 1px 4px #FF79CE;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "schoolbell";
 }
