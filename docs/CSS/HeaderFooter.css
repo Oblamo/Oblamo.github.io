@@ -36,6 +36,7 @@
 
 #darkLight:hover {
   background-color: #ffe1fb5f;
+  cursor: pointer;
 }
 
 /* Footer */
