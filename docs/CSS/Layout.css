@@ -1,11 +1,19 @@
 /* For all pages */
 
-h2{
+h1 {
     color: #FFE1FB;
+    font-family: 'VT323';
+    font-size: 50px;
+}
+
+h2 {
+    color: #FFE1FB;
+    font-family: 'VT323';
 }
 
 p {
     color: #FFE1FB;
+    font-family: 'VT323';
 }
 
 body {
@@ -29,6 +37,20 @@ body {
 }
 
 /* My projects */
+
+#projectLink {
+    color: #F2B705;
+    text-decoration: none;
+    font-family:'VT323';
+    font-size: 25px;
+    padding: 5px;
+}
+
+#projectLink:hover {
+    background-color: #F2B705;
+    color: #1E0126;
+    border-radius: 50px;
+}
 
 
 /* Project site */
