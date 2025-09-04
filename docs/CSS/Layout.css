@@ -50,9 +50,48 @@ body {
 #projectLink:hover {
     background-color: #F2B705;
     color: #1E0126;
-    border-radius: 50px;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
 }
 
 
 /* Project site */
 
+
+/* ------------------------------------------------------------ */
+/*                          Light theme                         */
+/* ------------------------------------------------------------ */
+
+
+/* For all pages */
+body.light {
+    background-color: rgb(255, 255, 255);
+}
+
+body.light h1{
+    color: black;
+}
+
+body.light h2{
+    color: black;
+}
+
+body.light p{
+    color: black;
+}
+
+/* Startpage */
+
+/* About me */
+body.light #picOfMe {
+    border-color: rgb(185, 185, 185);
+}
+
+
+/* My projects */
+body.light #projectLink:hover:hover {
+    background-color: rgba(0, 0, 0, 0.265);
+    color: #000000;
+}
+
+/* Project site */

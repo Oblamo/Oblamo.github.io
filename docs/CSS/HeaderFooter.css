@@ -19,6 +19,14 @@
     font-family: "schoolbell";
 }
 
+#headerLink:hover {
+    background-color: #F2B705;
+    color: #1E0126;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+
 #logo {
     flex: 1;
     max-width: 200px;
@@ -35,13 +43,13 @@
 }
 
 #darkLight:hover {
-  background-color: #ffe1fb5f;
-  cursor: pointer;
+    background-color: #ffe1fb5f;
+    cursor: pointer;
 }
 
 /* Footer */
 
-#mainFooter{
+#mainFooter {
     display: flex;
     justify-content: center;
 }
@@ -54,4 +62,49 @@
     font-size: 20px;
     text-decoration: none;
     font-family: "schoolbell";
+}
+
+#footerLink:hover {
+    background-color: #FF79CE;
+    color: #1E0126;
+    text-shadow: none;
+    border-radius: 999px;
+    transition: background-color 0.2s ease;
+}
+
+/* Other theme */
+
+/* Ändra alla gråa färger till matchande svartvitt headerbild // Header logotyp */
+/* Ändra även den blåa länkfärgen till något mer standardiserat / snyggare */
+
+body.light #mainHeader {
+    background-color: rgba(0, 0, 0, 0.265)
+}
+
+body.light #headerLink {
+    color: #3700ff;
+    text-shadow: none;
+}
+
+body.light #headerLink:hover {
+    background-color: #e1e1e1;
+    color: #000000;
+}
+
+body.light #darkLight {
+    background-color: #ffe1fb5f;
+}
+
+body.light #darkLight:hover {
+    background-color: #000000;
+}
+
+body.light #footerLink {
+    color: #3700ff; 
+    text-shadow: none
+}
+
+body.light #footerLink:hover {
+    background-color: rgba(0, 0, 0, 0.265);
+    color: #000000;
 }

@@ -1,27 +1,35 @@
-import { useEffect, useState } from "react";
+const button = document.getElementById("darkLight");
 
-export default function Projects() {
-    const [Projects, setProjects] = useState([]);
+button.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+});
 
-    useEffect(() => {
-        fetch("/projects.json")
-            .then(res => res.json())
-            .then(data => setProjects(data));
-    }, []);
+// import { useEffect, useState } from "react";
 
-    return (
-        <div>
-            {Projects.map((project, idx) => (
-                <div key={idx}>
-                    <h2>{project.name}</h2>
-                    <p>{project.description}</p>
-                    <p>{project.keywords}</p>
-                    <div>
-                        {project.pictures}
-                    </div>
-                    <p>{link}</p>
-                </div>
-            ))}
-        </div>
-    );
-}
+// function Projects() {
+//     const [Projects, setProjects] = useState([]);
+
+//     React.useEffect(() => {
+//         fetch("../JSON/Projects.json")
+//             .then(res => res.json())
+//             .then(data => setProjects(data));
+//     }, []);
+
+//     return (
+//         <div>
+//             {Projects.map((project, idx) => (
+//                 <div key={idx}>
+//                     <h2>{project.name}</h2>
+//                     <p>{project.description}</p>
+//                     <p>{project.keywords}</p>
+//                     <div>
+//                         {project.pictures}
+//                     </div>
+//                     <a>{link}</a>
+//                 </div>
+//             ))}
+//         </div>
+//     );
+// }
+
+// reactDOM.createRoot(document.getElementById("root")).render(<Projects />);

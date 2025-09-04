@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Twitter Fake News",
+        "name": "Twitter Fake News Detector",
         "description": "This project aims to classify Tweets as either fake news or real news based on a dataset containing information about both tweets and their users. The classification is done using machine learning models built with Python and scikit-learn. Libraries Used: pandas, scikit-learn, matplotlib. The project was later built with anvil for a more visual representation.",
         "pictures": [
             "ProjectPics/1/code_start.png",
@@ -10,8 +10,15 @@
             "ProjectPics/1/anvil_design.png",
             "ProjectPics/1/anvil_code.png"
         ],
-        "link": "Not on github",
-        "keywords": "Python, Pandas, Scikit-learn, Matplotlib, Anvil"
+        "link": "",
+        "keywords": [
+            "Python",
+            "Machine Learning"
+            "Pandas",
+            "Scikit-learn",
+            "Matplotlib",
+            "Anvil"
+        ]
     },
     {
         "id": 2,
