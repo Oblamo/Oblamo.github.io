@@ -51,7 +51,7 @@ body {
     background-color: #F2B705;
     color: #1E0126;
     border-radius: 999px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 }
 
 
@@ -65,7 +65,7 @@ body {
 
 /* For all pages */
 body.light {
-    background-color: rgb(255, 255, 255);
+    background-color: #F0F1F2;
 }
 
 body.light h1{
@@ -95,3 +95,16 @@ body.light #projectLink:hover:hover {
 }
 
 /* Project site */
+
+body.light #projectBox {
+    background-color: #ffffff;
+}
+
+body.light #projectLink {
+    color: #000000;
+}
+
+body.light #projectLink:hover {
+    background-color: rgba(0, 0, 0, 0.265);
+    color: #000000;
+}
