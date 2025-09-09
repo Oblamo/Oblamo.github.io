@@ -84,6 +84,8 @@ body.light #mainHeader {
 body.light #headerLink {
     color: #0000a0;
     text-shadow: none;
+    font-family: "Inclusive Sans";
+    font-size: large;
 
 }
 
@@ -103,7 +105,8 @@ body.light #darkLight:hover {
 
 body.light #footerLink {
     color: #0000a0; 
-    text-shadow: none
+    text-shadow: none;
+    font-family: "Inclusive Sans";
 }
 
 body.light #footerLink:hover {

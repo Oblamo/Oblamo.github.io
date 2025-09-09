@@ -1,7 +1,41 @@
 const button = document.getElementById("darkLight");
+const logo = document.getElementById("logo");
+const startpageheaderpic = document.getElementById("startpageheaderpic");
+
+let currentTheme = localStorage.getItem("theme") || "dark";
+applyTheme(currentTheme);
+
+function getBasePath() {
+  return window.location.pathname.includes("/Pages/") ? "../" : "";
+}
+
+function updateImages(theme) {
+const basePath = getBasePath();
+ if (logo) { 
+    logo.src = theme === "light" ? basePath + "Pictures/LogotypeLight.png" : basePath + "Pictures/Logotype.png";
+  }
+
+  if (startpageheaderpic) {
+    startpageheaderpic.src = theme === "light" ? basePath + "Pictures/HeaderStartPageLight.png" : basePath + "Pictures/HeaderStartPage.png";
+  }
+}
+
+function applyTheme(theme) {
+  if (theme === "light") {
+    document.body.classList.add("light");
+  } else {
+    document.body.classList.remove("light");
+  }
+  updateImages(theme);
+}
+
 
 button.addEventListener("click", () => {
     document.body.classList.toggle("light");
+
+    currentTheme = currentTheme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+    applyTheme(currentTheme);
 });
 
 // import { useEffect, useState } from "react";

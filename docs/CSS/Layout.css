@@ -70,14 +70,17 @@ body.light {
 
 body.light h1{
     color: black;
+    font-family: "Inclusive Sans";
 }
 
 body.light h2{
     color: black;
+    font-family: "Inclusive Sans";
 }
 
 body.light p{
     color: black;
+    font-family: "Inclusive Sans";
 }
 
 /* Startpage */
@@ -102,6 +105,7 @@ body.light #projectBox {
 
 body.light #projectLink {
     color: #000000;
+    font-family: "Inclusive Sans";
 }
 
 body.light #projectLink:hover {
