@@ -5,18 +5,15 @@ const startpageheaderpic = document.getElementById("startpageheaderpic");
 let currentTheme = localStorage.getItem("theme") || "dark";
 applyTheme(currentTheme);
 
-function getBasePath() {
-  return window.location.pathname.includes("/Pages/") ? "../" : "";
-}
+
 
 function updateImages(theme) {
-const basePath = getBasePath();
  if (logo) { 
-    logo.src = theme === "light" ? basePath + "Pictures/LogotypeLight.png" : basePath + "Pictures/Logotype.png";
+    logo.src = theme === "light" ? "Pictures/LogotypeLight.png" : "Pictures/Logotype.png";
   }
 
   if (startpageheaderpic) {
-    startpageheaderpic.src = theme === "light" ? basePath + "Pictures/HeaderStartPageLight.png" : basePath + "Pictures/HeaderStartPage.png";
+    startpageheaderpic.src = theme === "light" ? "Pictures/HeaderStartPageLight.png" : "Pictures/HeaderStartPage.png";
   }
 }
 
