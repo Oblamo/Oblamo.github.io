@@ -3,7 +3,7 @@
 h1 {
     color: #FFE1FB;
     font-family: 'VT323';
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 h2 {
@@ -14,6 +14,7 @@ h2 {
 p {
     color: #FFE1FB;
     font-family: 'VT323';
+    font-size: 1.2rem;
 }
 
 body {
@@ -30,11 +31,72 @@ body {
 
 /* About me */
 
+.aboutMeContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.item3 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.item4 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.item5 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+
 #picOfMe {
     width: 400px;
     border-style: solid;
     border-color: #FF79CE;
     border-radius: 1000000000000000%;
+}
+
+#cvButton {
+    background-color: #100014;
+    border-radius: 999px;
+    color: #F2B705;
+    text-decoration: none;
+    font-family:'VT323';
+    font-size: 25px;
+    padding: 5px;
+}
+
+#cvButton:hover {
+    background-color: #F2B705;
+    color: #1E0126;
+    transition: background-color 0.1s ease;
+}
+
+#icons {
+    color: #FFE1FB;
+    font-size: 2rem;
+}
+
+#iconLinks {
+    color: #FF79CE;
+    text-decoration: none;
+    font-family: "schoolbell";
+    padding: 1rem;
+
 }
 
 /* My projects */
@@ -90,25 +152,49 @@ body.light #picOfMe {
     border-color: rgb(185, 185, 185);
 }
 
-
-/* My projects */
-body.light #projectLink:hover:hover {
-    background-color: rgba(0, 0, 0, 0.265);
-    color: #000000;
+body.light #cvButton {
+    color: #0000a0;
+    background-color: #F0F1F2;
+    font-family: "Inclusive Sans";
 }
 
-/* Project site */
+body.light #cvButton:hover {
+    background-color: #d9dcdf;
+    color: #0000a0;
+}
+
+body.light #icons {
+    color: #0e76a8;
+}
+
+body.light #iconLinks {
+    color: #100014;
+    font-family: "Inclusive Sans";
+}
+
+body.light #iconLinks:hover {
+    background-color: #d9dcdf;
+    border-radius: 999px;
+    transition: background-color 0.5s ease;
+}
+
+/* My projects */
+body.light #projectLink:hover {
+    background-color: #d9dcdf;
+    color: #0000a0;
+    transition: background-color 0.5s ease;
+}
 
 body.light #projectBox {
     background-color: #ffffff;
 }
 
 body.light #projectLink {
-    color: #000000;
+    color: #0000a0;
     font-family: "Inclusive Sans";
 }
 
-body.light #projectLink:hover {
-    background-color: rgba(0, 0, 0, 0.265);
-    color: #000000;
-}
+/* Project site */
+
+
+

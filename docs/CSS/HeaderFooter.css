@@ -24,6 +24,7 @@
     color: #1E0126;
     border-radius: 999px;
     transition: background-color 0.1s ease;
+    
 }
 
 
@@ -91,9 +92,10 @@ body.light #headerLink {
 }
 
 body.light #headerLink:hover {
-    background-color: #BABCBF;
+    background-color: #d9dcdf;
     color: #0000a0;
     text-decoration:underline 1px #0000a0;
+    transition: background-color 0.5s ease;
 }
 
 body.light #darkLight {
@@ -114,4 +116,5 @@ body.light #footerLink:hover {
     background-color: #BABCBF;
     color: #0000a0;
     text-decoration:underline 1px #0000a0;
+    transition: background-color 0.5s ease;
 }

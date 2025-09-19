@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Handjet:wght@100..900&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Schoolbell&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="Javascript/script.js" defer></script>
 
 </head>
@@ -20,21 +21,53 @@
             <a href="index.html"><img id="logo" src="Pictures/Logotype.png" alt="Hemsidans logotyp"></a>
             <li><a id="headerLink" href="AboutMe.html">About me</a></li>
             <li><a id="headerLink" href="MyProjects.html">My Projects</a></li>
-            <li><a id="headerLink" href="https://github.com/Oblamo">My GitHub</a></li>
-            <li><a id="headerLink" href="https://www.linkedin.com/in/hanna-nilsson-531a51252/">My LinkedIn</a></li>
+            <li><a id="headerLink" href="https://github.com/Oblamo" target="_blank">My GitHub</a></li>
+            <li><a id="headerLink" href="https://www.linkedin.com/in/hanna-nilsson-" target="_blank">My LinkedIn</a></li>
             <button id="darkLight">🌙☀️</button>
             </button>
         </ul>
     </header>
 
-    <div>
+    <div class="aboutMeContainer">
+        <div class="aboutMeItem1">
+            <img id="picOfMe" src="Pictures/PicOfMe.jpg" alt="Picture of me">
+        </div>
+        <div class="aboutMeItem2">
+            <h1>Get to know me</h1>
 
-        <img id="picOfMe" src="Pictures/PicOfMe.jpg" alt="Picture of me">
-        <p>Short description and career goals</p>
-
-        <h2>CV</h2>
-        <img src="" alt="Pic of my CV">
-
+            <p> Hello I'm Hanna. I'm currently on my fifth semester of studying Information Systems at Örebro University in
+                Sweden.
+                I have a strong passion for IT, especially backend development, I've always loved computers and technolgy
+                fascinates me.
+                I love to learn new things and expand my knowledge, and that led me into the world of coding.
+            </p>
+            <p>
+                My primary interest is in cybersecurity, with additional curiosity about artificial
+                intelligence (AI) and game development. Cybersecurity fascinates me because it
+                combines problem-solving, ethical responsibility, and technical expertise.
+            </p>
+            <p>
+                If you don't find me by the computer coding or playing games, I am probably with my guitar.
+                Growing up in a musical family nurtured my creativity,
+                and I enjoy exploring that side of myself through design.
+                As you may notice on this website... Did I mention I love retro games and pixel art?
+            </p>
+        </div>
+        <div class="aboutMeItem3">
+            <a id=cvButton href="Pictures/Hanna Nilsson CV.pdf" target="_blank">Visit my CV</a>
+        </div>
+    
+        <div class="aboutMeItem4">
+            <h2>Contact me</h2>
+        </div>
+    
+        <div class="aboutMeItem5">
+            <i class="fa fa-envelope" id="icons"></i>
+            <a href="mailto:hms.nilsson@protonmail.com" id="iconLinks">hms.nilsson@protonmail.com</a>
+            <i class="fa-brands fa-linkedin" id="icons"></i>
+            <a href="https://linkedin.com/in/hanna-nilsson-" id="iconLinks" target="_blank">Hanna Nilsson</a>
+        </div>
+    
     </div>
 
     <footer id="mainFooter">
