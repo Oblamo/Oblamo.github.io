@@ -39,11 +39,11 @@
     margin: 0.5rem;
     border-radius: 999px;
     transition: background-color 0.3s ease;
-    background-color: #000000;
+    background-color: #5555555f;
 }
 
 #darkLight:hover {
-    background-color: #ffe1fb5f;
+    background-color: #ffe1fb73;
     cursor: pointer;
 }
 
@@ -72,13 +72,15 @@
     transition: background-color 0.1s ease;
 }
 
-/* Other theme */
+/* ------------------------------------------------------------ */
+/*                          Light theme                         */
+/* ------------------------------------------------------------ */
 
-/* Ändra alla gråa färger till matchande svartvitt headerbild // Header logotyp */
-/* Ändra även den blåa länkfärgen till något mer standardiserat / snyggare */
 
 body.light #mainHeader {
-    background-color: #BABCBF
+    background-color: #ffffff;
+    gap: 5.7rem;
+
 }
 
 body.light #headerLink {
@@ -86,7 +88,6 @@ body.light #headerLink {
     text-shadow: none;
     font-family: "Inclusive Sans";
     font-size: large;
-
 }
 
 body.light #headerLink:hover {
@@ -96,21 +97,21 @@ body.light #headerLink:hover {
 }
 
 body.light #darkLight {
-    background-color: #f0f2f0;
+    background-color: #dfe6ee;
 }
 
 body.light #darkLight:hover {
-    background-color: #0B0C0D;
+    background-color: #4F5359;
 }
 
 body.light #footerLink {
     color: #0000a0; 
     text-shadow: none;
-    font-family: "Inclusive Sans";
+    font-family: "Inclusive Sans", sans-serif;
 }
 
 body.light #footerLink:hover {
-    background-color: #F0F1F2;
+    background-color: #BABCBF;
     color: #0000a0;
     text-decoration:underline 1px #0000a0;
 }
