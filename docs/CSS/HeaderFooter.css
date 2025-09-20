@@ -3,7 +3,7 @@
 #mainHeader {
     list-style-type: none;
     display: flex;
-    gap: 6rem;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem 0;
     margin: 0;
@@ -70,7 +70,7 @@
     color: #1E0126;
     text-shadow: none;
     border-radius: 999px;
-    transition: background-color 0.1s ease;
+    transition: background-color 0.5s ease;
 }
 
 /* ------------------------------------------------------------ */
@@ -116,5 +116,4 @@ body.light #footerLink:hover {
     background-color: #BABCBF;
     color: #0000a0;
     text-decoration:underline 1px #0000a0;
-    transition: background-color 0.5s ease;
 }
