@@ -1,4 +1,7 @@
 /* Header */
+html {
+    scroll-behavior: smooth;
+}
 
 #mainHeader {
     list-style-type: none;
