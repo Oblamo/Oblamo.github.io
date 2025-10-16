@@ -29,5 +29,16 @@
         ],
         "link": "",
         "keywords": "javascript?"
+    },
+
+        {
+        "id": 2,
+        "name": "Another test!",
+        "description": "This is another test project to build the website. How many will I need..?",
+        "pictures": [
+            "Pictures/LogotypeLight.png"
+        ],
+        "link": "",
+        "keywords": "Magic"
     }
 ]
