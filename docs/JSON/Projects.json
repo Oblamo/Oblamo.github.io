@@ -4,16 +4,16 @@
         "name": "Twitter Fake News Detector",
         "description": "This project aims to classify Tweets as either fake news or real news based on a dataset containing information about both tweets and their users. The classification is done using machine learning models built with Python and scikit-learn. Libraries Used: pandas, scikit-learn, matplotlib. The project was later built with anvil for a more visual representation.",
         "pictures": [
-            "ProjectPics/1/code_start.png",
-            "ProjectPics/1/code_end.png",
-            "ProjectPics/1/result_score.png",
-            "ProjectPics/1/anvil_design.png",
-            "ProjectPics/1/anvil_code.png"
+            "JSON/ProjectPics/1/anvil_design.png",
+            "JSON/ProjectPics/1/result_score.png",
+            "JSON/ProjectPics/1/code_start.png",
+            "JSON/ProjectPics/1/code_end.png",
+            "JSON/ProjectPics/1/anvil_code.png"
         ],
         "link": "",
         "keywords": [
             "Python",
-            "Machine Learning"
+            "Machine Learning",
             "Pandas",
             "Scikit-learn",
             "Matplotlib",
@@ -22,10 +22,12 @@
     },
     {
         "id": 2,
-        "name": "",
-        "description": "",
-        "pictures": "",
+        "name": "Test project",
+        "description": "This is a test project to build the website...",
+        "pictures": [
+            "Pictures/Logotype.png"
+        ],
         "link": "",
-        "keywords": ""
+        "keywords": "javascript?"
     }
 ]

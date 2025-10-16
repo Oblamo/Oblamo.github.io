@@ -5,8 +5,6 @@ const startpageheaderpic = document.getElementById("startpageheaderpic");
 let currentTheme = localStorage.getItem("theme") || "dark";
 applyTheme(currentTheme);
 
-
-
 function updateImages(theme) {
  if (logo) { 
     logo.src = theme === "light" ? "Pictures/LogotypeLight.png" : "Pictures/Logotype.png";
@@ -26,7 +24,6 @@ function applyTheme(theme) {
   updateImages(theme);
 }
 
-
 button.addEventListener("click", () => {
     document.body.classList.toggle("light");
 
@@ -35,32 +32,39 @@ button.addEventListener("click", () => {
     applyTheme(currentTheme);
 });
 
-// import { useEffect, useState } from "react";
+fetch("JSON/Projects.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("projectBox");
+    const projects = data;
 
-// function Projects() {
-//     const [Projects, setProjects] = useState([]);
+    projects.forEach(project => { 
+      const box = document.createElement("div"); 
+      box.classList.add("projectBox");
 
-//     React.useEffect(() => {
-//         fetch("../JSON/Projects.json")
-//             .then(res => res.json())
-//             .then(data => setProjects(data));
-//     }, []);
+      const img = document.createElement("img");
+      img.src = project.pictures[0];
+      img.alt = project.name;                    
+      img.classList.add("projectPic")
 
-//     return (
-//         <div>
-//             {Projects.map((project, idx) => (
-//                 <div key={idx}>
-//                     <h2>{project.name}</h2>
-//                     <p>{project.description}</p>
-//                     <p>{project.keywords}</p>
-//                     <div>
-//                         {project.pictures}
-//                     </div>
-//                     <a>{link}</a>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// }
+      const title = document.createElement("p");
+      title.textContent = project.name;
+      title.classList.add("projectTitle");
 
-// reactDOM.createRoot(document.getElementById("root")).render(<Projects />);
+      const description = document.createElement("p");
+      description.textContent = project.description;
+
+      const link = document.createElement("a");
+      link.href = project.link || "#";
+      link.textContent = "Read more";
+      link.classList.add("projectLink");
+
+      box.appendChild(img); 
+      box.appendChild(title);
+      box.appendChild(description);
+      box.appendChild(link);
+
+      container.appendChild(box);
+    });
+  })
+  .catch(error => console.error("Error loading projects:", error));

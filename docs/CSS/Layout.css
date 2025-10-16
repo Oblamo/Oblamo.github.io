@@ -116,7 +116,25 @@ body {
 
 /* My projects */
 
-#projectLink {
+#myProjects {
+
+}
+
+.projectBox {
+
+}
+
+.projectTitle {
+    font-size: 200%;
+}
+
+.projectPic {
+    width: 500px;
+    border-style: solid;
+    border-color: #3F0140;
+}
+
+.projectLink {
     color: #F2B705;
     text-decoration: none;
     font-family:'VT323';
@@ -124,7 +142,7 @@ body {
     padding: 5px;
 }
 
-#projectLink:hover {
+.projectLink:hover {
     background-color: #F2B705;
     color: #1E0126;
     border-radius: 999px;
