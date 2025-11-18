@@ -10,7 +10,6 @@
             "JSON/ProjectPics/1/code_end.png",
             "JSON/ProjectPics/1/anvil_code.png"
         ],
-        "link": "",
         "keywords": [
             "Python",
             "Machine Learning",
@@ -27,18 +26,16 @@
         "pictures": [
             "Pictures/Logotype.png"
         ],
-        "link": "",
         "keywords": "javascript?"
     },
 
         {
-        "id": 2,
+        "id": 3,
         "name": "Another test!",
         "description": "This is another test project to build the website. How many will I need..?",
         "pictures": [
             "Pictures/LogotypeLight.png"
         ],
-        "link": "",
         "keywords": "Magic"
     }
 ]

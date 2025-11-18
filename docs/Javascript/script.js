@@ -2,6 +2,8 @@ const button = document.getElementById("darkLight");
 const logo = document.getElementById("logo");
 const startpageheaderpic = document.getElementById("startpageheaderpic");
 
+
+// Code for light theme vs dark theme
 let currentTheme = localStorage.getItem("theme") || "dark";
 applyTheme(currentTheme);
 
@@ -32,6 +34,8 @@ button.addEventListener("click", () => {
     applyTheme(currentTheme);
 });
 
+
+// Code for showing projects on 'MyProjects' 
 fetch("JSON/Projects.json")
   .then(response => response.json())
   .then(data => {
@@ -55,7 +59,7 @@ fetch("JSON/Projects.json")
       description.textContent = project.description;
 
       const link = document.createElement("a");
-      link.href = project.link || "#";
+      link.href = "ProjectSite.html?id=" + project.id;
       link.textContent = "Read more";
       link.classList.add("projectLink");
 
@@ -67,4 +71,10 @@ fetch("JSON/Projects.json")
       container.appendChild(box);
     });
   })
+
+// Code for showing correct project on 'ProjectSite'
+
+
+
+//Error catch for showing projects
   .catch(error => console.error("Error loading projects:", error));
