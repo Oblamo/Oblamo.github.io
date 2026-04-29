@@ -21,21 +21,41 @@
     },
     {
         "id": 2,
-        "name": "Test project",
-        "description": "This is a test project to build the website...",
+        "name": "Podtracker",
+        "description": "This project fetched an RSS feed, specifically for podcasts. The focus was on solid architecture, using a classic 3-layer structure consisting of a data layer, business layer, and presentation layer (along with models). The visible design is simple, while the underlying data structure is more complex and secure.",
         "pictures": [
-            "Pictures/Logotype.png"
+            "JSON/ProjectPics/2/startpage.png",
+            "JSON/ProjectPics/2/add_pod_page.png",
+            "JSON/ProjectPics/2/solution_architecture.png",
+            "JSON/ProjectPics/2/model_example.png",
+            "JSON/ProjectPics/2/validation_class.png"
         ],
-        "keywords": "javascript?"
+        "keywords": [
+            "Data Architecture", 
+            "C#",
+            "SQL Server",
+            "RSS"
+    ]
     },
 
         {
         "id": 3,
-        "name": "Another test!",
-        "description": "This is another test project to build the website. How many will I need..?",
+        "name": "Map game",
+        "description": "(Still in progress!) This project is part of an educational platform. It is a map game where the user places a marker on a specific location. It uses MapLibre for map components and C#, .NET, and SQL for backend functionality. It builds on previously developed work, using Razor Pages and Blazor, with MudBlazor components, and is hosted on Azure.",
         "pictures": [
-            "Pictures/LogotypeLight.png"
+            
+            "JSON/ProjectPics/3/map_game.png",
+            "JSON/ProjectPics/3/instructions.png",
+            "JSON/ProjectPics/3/js_maplibre.png",
+            "JSON/ProjectPics/3/mudblazor_example.png"
         ],
-        "keywords": "Magic"
+        "keywords": [ 
+            "C#",
+            "SQL Server",
+            "Javascript",
+            "API",
+            "Blazor",
+            "Azure"
+    ]
     }
 ]
