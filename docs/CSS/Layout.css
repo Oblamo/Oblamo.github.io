@@ -30,6 +30,10 @@ body {
     width: 100%;
 }
 
+.centerText {
+    text-align: center;
+}
+
 /* About me */
 
 .aboutMeContainer {

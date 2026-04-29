@@ -8,7 +8,7 @@ let currentTheme = localStorage.getItem("theme") || "dark";
 applyTheme(currentTheme);
 
 function updateImages(theme) {
- if (logo) { 
+  if (logo) {
     logo.src = theme === "light" ? "Pictures/LogotypeLight.png" : "Pictures/Logotype.png";
   }
 
@@ -27,28 +27,40 @@ function applyTheme(theme) {
 }
 
 button.addEventListener("click", () => {
-    document.body.classList.toggle("light");
+  document.body.classList.toggle("light");
 
-    currentTheme = currentTheme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", currentTheme);
-    applyTheme(currentTheme);
+  currentTheme = currentTheme === "light" ? "dark" : "light";
+  localStorage.setItem("theme", currentTheme);
+  applyTheme(currentTheme);
 });
 
+// Code for showing highlighted project on startpage (Current project is usually the latest in the JSON-file)
+fetch("JSON/Projects.json")
+  .then(response => response.json())
+  .then(data => {
+
+    const project = data[data.length - 1];
+    displayProject(project);
+
+  });
 
 // Code for showing projects on 'MyProjects' 
+const projectsContainer = document.getElementById("myProjects");
+if (projectsContainer) {
+
 fetch("JSON/Projects.json")
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById("projectBox");
     const projects = data;
 
-    projects.forEach(project => { 
-      const box = document.createElement("div"); 
+    projects.forEach(project => {
+      const box = document.createElement("div");
       box.classList.add("projectBox");
 
       const img = document.createElement("img");
       img.src = project.pictures[0];
-      img.alt = project.name;                    
+      img.alt = project.name;
       img.classList.add("projectPic")
 
       const title = document.createElement("p");
@@ -63,7 +75,7 @@ fetch("JSON/Projects.json")
       link.textContent = "Read more";
       link.classList.add("projectLink");
 
-      box.appendChild(img); 
+      box.appendChild(img);
       box.appendChild(title);
       box.appendChild(description);
       box.appendChild(link);
@@ -71,33 +83,30 @@ fetch("JSON/Projects.json")
       container.appendChild(box);
     });
   })
-
-//Error catch for showing projects
-  .catch(error => console.error("Error loading projects:", error));
-
+}
 
 //Fetches the correct project on 'ProjectSite'
 const projectSiteContainer = document.getElementById("projectSite");
 
 if (projectSiteContainer) {
 
-const params = new URLSearchParams(window.location.search);
-const projectId = parseInt(params.get("id"));
+  const params = new URLSearchParams(window.location.search);
+  const projectId = parseInt(params.get("id"));
 
-fetch("JSON/Projects.json")
-  .then(response => response.json())
-  .then(data => {
-    const project = data.find(p => p.id === projectId);
+  fetch("JSON/Projects.json")
+    .then(response => response.json())
+    .then(data => {
+      const project = data.find(p => p.id === projectId);
 
-    if (!project) {
-      document.body.innerHTML = "<h1>Projektet hittades inte</h1>";
-      return;
-    }
-    displayProject(project);
-  });
+      if (!project) {
+        document.body.innerHTML = "<h1>Projektet hittades inte</h1>";
+        return;
+      }
+      displayProject(project);
+    });
 }
 
-//displays correct project on 'ProjectSite'
+//Displays project
 function displayProject(project) {
 
   document.getElementById("title").textContent = project.name;
@@ -120,6 +129,9 @@ function displayProject(project) {
   });
 
   const keywordsContainer = document.getElementById("keywords");
+  if (!keywordsContainer) {
+    return;
+  }
   keywordsContainer.innerHTML = "";
   project.keywords.forEach(k => {
     const span = document.createElement("span");
