@@ -72,9 +72,71 @@ fetch("JSON/Projects.json")
     });
   })
 
-// Code for showing correct project on 'ProjectSite'
-
-
-
 //Error catch for showing projects
   .catch(error => console.error("Error loading projects:", error));
+
+
+//Fetches the correct project on 'ProjectSite'
+const projectSiteContainer = document.getElementById("projectSite");
+
+if (projectSiteContainer) {
+
+const params = new URLSearchParams(window.location.search);
+const projectId = parseInt(params.get("id"));
+
+fetch("JSON/Projects.json")
+  .then(response => response.json())
+  .then(data => {
+    const project = data.find(p => p.id === projectId);
+
+    if (!project) {
+      document.body.innerHTML = "<h1>Projektet hittades inte</h1>";
+      return;
+    }
+    displayProject(project);
+  });
+}
+
+//displays correct project on 'ProjectSite'
+function displayProject(project) {
+
+  document.getElementById("title").textContent = project.name;
+  document.getElementById("description").textContent = project.description;
+
+  const imgContainer = document.getElementById("images");
+  imgContainer.innerHTML = "";
+
+  project.pictures.forEach(pic => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+
+
+    const img = document.createElement("img");
+    img.src = pic;
+
+    slide.appendChild(img);
+    imgContainer.appendChild(slide);
+
+  });
+
+  const keywordsContainer = document.getElementById("keywords");
+  keywordsContainer.innerHTML = "";
+  project.keywords.forEach(k => {
+    const span = document.createElement("span");
+    span.textContent = k;
+    span.classList.add("keyword");
+    keywordsContainer.appendChild(span);
+  });
+
+}
+
+new Swiper('.swiper', {
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 40,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
