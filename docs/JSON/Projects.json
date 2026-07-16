@@ -41,7 +41,7 @@
         {
         "id": 3,
         "name": "Map game",
-        "description": "(Still in progress!) This project is part of an educational platform. It is a map game where the user places a marker on a specific location. It uses MapLibre for map components and C#, .NET, and SQL for backend functionality. It builds on previously developed work, using Razor Pages and Blazor, with MudBlazor components, and is hosted on Azure.",
+        "description": "This project is part of an educational platform. It is a map game where the user places a marker on a specific location. It uses MapLibre for map components and C#, .NET, and SQL for backend functionality. It builds on previously developed work, using Razor Pages and Blazor with MudBlazor components, and it is hosted on Azure.",
         "pictures": [
             
             "JSON/ProjectPics/3/map_game.png",
